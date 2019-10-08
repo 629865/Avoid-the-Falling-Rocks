@@ -30,6 +30,7 @@ class Sprite {
     }
     this.x += this.vx
     this.y += this.vy
+    
   }
   stop() {
     this.vx = 0

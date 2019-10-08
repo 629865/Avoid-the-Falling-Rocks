@@ -1,16 +1,24 @@
 let player
 let rocks = []
 let sprites = []
+var timer;
 function setup() {
   createCanvas(600, 600);
   player = new Player()
   sprites.push(player)
+  setInterval(timeIt, 100);
   for (var i = 0; i < 6; i++) {
     
     rock = new Rock(i*80+80, 60);
     rocks[i] = rock
     sprites.push(rock)
   }
+}
+
+function timeIt() {
+  for (var i = 0; i < 6; i++) {
+ 
+}
 }
 
 
@@ -25,6 +33,7 @@ function draw() {
     noLoop()
       }
   checkCollisions()
+  rocks[0].SPEED += 1;
 }
 
 function checkCollisions() {
@@ -40,7 +49,6 @@ function checkCollisions() {
         player.die()
       
     }
-    
 }
   }
 }

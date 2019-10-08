@@ -9,5 +9,6 @@ class Rock extends Sprite {
    if (checkCC(this.x, this.y, this.width, z.x, z.y, z.width, 20)) {
      z.die()
    } 
+  
   }
 }
