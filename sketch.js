@@ -34,6 +34,11 @@ function draw() {
       }
   checkCollisions()
   rocks[0].SPEED += 1;
+  for (let i = 0; i < rocks.length; i++) {
+    for (let j = i + 1; j < rocks.length; j++) {
+      rocks[i].checkCollision(rocks[j])
+    }
+  }
 }
 
 function checkCollisions() {
