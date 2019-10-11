@@ -23,13 +23,17 @@ function timeIt() {
 
 
 function draw() {
-  background(220);text(frameCount, 0, 10);
+  background(220);
+  fill ("black");
+  textSize(32)
+  text(frameCount, 0, 30);
   sprites.filter(sprite => sprite.active).forEach(sprite => {
   sprite.update()
     sprite.draw()
   })
   if (!player.active) {
-      text("Game Over!" , width/2, height/2)
+    fill("red")  
+    text("Game Over!" , width/2-80, height/2)
     noLoop()
       }
   checkCollisions()
